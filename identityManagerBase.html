@@ -67,7 +67,8 @@
 	  var idBase = new esri.IdentityManagerBase();  
 		var serverInfo = {  
         "server": "https://sampleserver6.arcgisonline.com",  
-        "tokenServiceUrl": "https://sampleserver6.arcgisonline.com/arcgis/tokens/"  
+        "tokenServiceUrl": "https://sampleserver6.arcgisonline.com/arcgis/tokens/",
+	"shortLivedTokenValidity" : 60		
 		};  
 		var def = idBase.generateToken(serverInfo, { "username": "user2", "password": "user2", "client": "referer", "referer": document.URL });
 		def.then(function(value){
